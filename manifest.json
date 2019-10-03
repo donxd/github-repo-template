@@ -1,0 +1,14 @@
+{
+	"name" : "github-repo-template",
+	"version" : "1.0",
+	"manifest_version" : 2,
+	"description" : "Addon to prepare new repository",
+	"permissions" : ["tabs", "*://*.github.com/*", "clipboardRead"],
+	"content_scripts" : [
+		{
+			"matches" : ["*://*.github.com/*"],
+			"js" : ["script.js"],
+			"run_at" : "document_end"
+		}
+	]
+}
